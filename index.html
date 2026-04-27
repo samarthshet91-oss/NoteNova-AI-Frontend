@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoteNova AI | AI Notes Sharing Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="#home" aria-label="NoteNova AI home">
+        <span class="brand-mark">✦</span>
+        <span>NoteNova AI</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links">
+        <a href="#library">Explore</a>
+        <a href="#tools">AI Tools</a>
+        <a href="#stats">Dashboard</a>
+        <button class="nav-cta open-upload" type="button">Upload</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-content fade-up">
+        <div class="eyebrow">🚀 AI-powered campus knowledge hub</div>
+        <h1>NoteNova AI</h1>
+        <p class="tagline">Share notes. Learn smarter. Revise faster.</p>
+        <p class="hero-copy">
+          Discover high-quality notes, generate instant summaries, and revise with intelligent study tools built for serious students.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary open-upload" type="button">Upload Notes</button>
+          <a class="btn btn-secondary" href="#library">Explore Notes</a>
+        </div>
+      </div>
+
+      <div class="hero-panel fade-up delay-one" aria-label="Featured notes preview">
+        <div class="panel-topline">
+          <span>Live Library</span>
+          <strong>+24 today</strong>
+        </div>
+        <div class="preview-note active">
+          <span class="preview-icon">🤖</span>
+          <div>
+            <strong>AI Search Algorithms</strong>
+            <p>Summarized in 42 seconds</p>
+          </div>
+        </div>
+        <div class="preview-note">
+          <span class="preview-icon">📘</span>
+          <div>
+            <strong>Python Unit 1 Notes</strong>
+            <p>4.9 rating · 2.4k downloads</p>
+          </div>
+        </div>
+        <div class="ai-spark">
+          <span>✨</span>
+          <p>Smart revision path ready for your next exam.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats section" id="stats" aria-label="Platform stats">
+      <div class="stat-card">
+        <span>📚</span>
+        <strong>1200+</strong>
+        <p>Notes Shared</p>
+      </div>
+      <div class="stat-card">
+        <span>🎓</span>
+        <strong>850+</strong>
+        <p>Students</p>
+      </div>
+      <div class="stat-card">
+        <span>🧠</span>
+        <strong>300+</strong>
+        <p>AI Summaries</p>
+      </div>
+      <div class="stat-card">
+        <span>⚡</span>
+        <strong>95%</strong>
+        <p>Faster Revision</p>
+      </div>
+    </section>
+
+    <section class="library section" id="library">
+      <div class="section-heading">
+        <span class="eyebrow">Notes Library</span>
+        <h2>Find the exact note you need</h2>
+        <p>Search by topic, filter by subject, and launch AI-powered actions from every card.</p>
+      </div>
+
+      <div class="library-controls">
+        <label class="search-wrap" for="noteSearch">
+          <span>⌕</span>
+          <input id="noteSearch" type="search" placeholder="Search notes, subjects, or uploaders...">
+        </label>
+
+        <div class="filter-chips" aria-label="Subject filters">
+          <button class="chip active" type="button" data-filter="All">All</button>
+          <button class="chip" type="button" data-filter="CSE">CSE</button>
+          <button class="chip" type="button" data-filter="AI">AI</button>
+          <button class="chip" type="button" data-filter="Maths">Maths</button>
+          <button class="chip" type="button" data-filter="Physics">Physics</button>
+        </div>
+      </div>
+
+      <div class="notes-grid" id="notesGrid"></div>
+      <p class="empty-state" id="emptyState">No notes found. Try a different search or filter.</p>
+    </section>
+
+    <section class="tools section" id="tools">
+      <div class="section-heading">
+        <span class="eyebrow">AI Tools</span>
+        <h2>Study tools that feel one step ahead</h2>
+        <p>Premium AI workflows for summarizing, testing, solving, and revising faster.</p>
+      </div>
+
+      <div class="tools-grid">
+        <article class="tool-card">
+          <span class="tool-icon">✨</span>
+          <h3>AI Summary Generator</h3>
+          <p>Convert long notes into crisp exam-ready key points in seconds.</p>
+        </article>
+        <article class="tool-card">
+          <span class="tool-icon">📝</span>
+          <h3>Quiz Generator</h3>
+          <p>Create practice questions from any uploaded note or topic.</p>
+        </article>
+        <article class="tool-card">
+          <span class="tool-icon">💬</span>
+          <h3>Doubt Solver</h3>
+          <p>Ask follow-up questions and get clear, student-friendly explanations.</p>
+        </article>
+        <article class="tool-card">
+          <span class="tool-icon">🃏</span>
+          <h3>Smart Flashcards</h3>
+          <p>Turn definitions, formulas, and concepts into interactive revision cards.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>NoteNova AI</strong>
+      <p>Frontend-only prototype built with HTML, CSS, JavaScript, and localStorage.</p>
+    </div>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+  <div class="modal-backdrop" id="summaryModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="summaryTitle">
+      <button class="modal-close" type="button" data-close="summaryModal" aria-label="Close summary modal">×</button>
+      <div class="modal-badge">✅</div>
+      <h2 id="summaryTitle">AI Summary Generated ✅</h2>
+      <p>Key points extracted from this note using AI.</p>
+      <ul class="summary-list">
+        <li>Core concepts grouped into simple revision blocks.</li>
+        <li>Important formulas, definitions, and exam keywords highlighted.</li>
+        <li>Suggested quick-revision order generated from topic priority.</li>
+      </ul>
+      <button class="btn btn-primary modal-action" type="button" data-close="summaryModal">Close</button>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="uploadModal" aria-hidden="true">
+    <div class="modal upload-modal" role="dialog" aria-modal="true" aria-labelledby="uploadTitle">
+      <button class="modal-close" type="button" data-close="uploadModal" aria-label="Close upload modal">×</button>
+      <h2 id="uploadTitle">Upload Notes</h2>
+      <p>Add a note to your local prototype library.</p>
+      <form id="uploadForm">
+        <label>
+          <span>Note title</span>
+          <input type="text" id="uploadTitleInput" placeholder="e.g. Operating System Unit 2" required>
+        </label>
+        <label>
+          <span>Subject</span>
+          <select id="uploadSubject" required>
+            <option value="">Choose subject</option>
+            <option value="CSE">CSE</option>
+            <option value="AI">AI</option>
+            <option value="Maths">Maths</option>
+            <option value="Physics">Physics</option>
+          </select>
+        </label>
+        <label>
+          <span>Description</span>
+          <textarea id="uploadDescription" rows="4" placeholder="Short description for students..." required></textarea>
+        </label>
+        <label class="file-drop">
+          <span>📎</span>
+          <strong>Drop PDF or DOCX here</strong>
+          <small>Frontend placeholder only</small>
+          <input type="file" aria-label="Upload file placeholder">
+        </label>
+        <button class="btn btn-primary submit-btn" type="submit">Submit Note</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Note uploaded successfully!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
