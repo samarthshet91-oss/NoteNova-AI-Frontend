@@ -615,7 +615,7 @@ border: 1px solid rgba(53,225,255,0.5);
   place-items: center;
   padding: 1rem;
   background: rgba(4, 10, 19, 0.72);
-  opacity: 1;
+  opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease;
   backdrop-filter: blur(12px);
